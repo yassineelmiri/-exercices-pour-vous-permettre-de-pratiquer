@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 5rem;
+    background-color: #d1cece;
+}
+
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+.slide {
+    display: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 44px;
+    color: red;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
