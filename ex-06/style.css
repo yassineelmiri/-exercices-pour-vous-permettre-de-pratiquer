@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  #compteur {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  #compteur div {
+    text-align: center;
+    margin: 0 20px;
+  }
+
+  #compteur span {
+    font-size: 36px;
+  }
+
+  #compteur span:last-child {
+    font-size: 24px;
+  }
