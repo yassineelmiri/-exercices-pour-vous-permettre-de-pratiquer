@@ -1,0 +1,40 @@
+h1 {
+    text-align: center;
+}
+
+#app {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#task-input {
+    width: 70%;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#add-button {
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.task input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.task.completed label {
+    text-decoration: line-through;
+    color: #888;
+}
