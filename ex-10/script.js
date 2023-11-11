@@ -1,30 +1,24 @@
-  // Générez un nombre aléatoire entre 1 et 100
-  const targetNumber = Math.floor(Math.random() * 100) + 1;
-  let numberOfGuesses = 0;
-  let isGameWon = false;
+  // Génération d'un nombre aléatoire entre 1 et 100
+  const secretNumber = Math.floor(Math.random() * 100) + 1;
+  let attempts = 0;
 
   function checkGuess() {
-      const guessInput = document.getElementById('guessInput');
-      const message = document.getElementById('message');
-      const userGuess = parseInt(guessInput.value);
+      // Récupération de la valeur saisie par l'utilisateur
+      const userGuess = document.getElementById("guessInput").value;
 
-      if (isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
-          message.textContent = 'Veuillez entrer un nombre valide entre 1 et 100.';
+      // Vérification de la devinette
+      if (userGuess == secretNumber) {
+          document.getElementById("message").innerHTML = `Bravo! Vous avez trouvé le nombre en ${attempts} tentatives.`;
+          document.getElementById("message").style = 'background-color: #33ff00';
+      } else if (userGuess < secretNumber) {
+          document.getElementById("message").innerHTML = "Le nombre est plus grand. Essayez à nouveau.";
+          document.getElementById("message").style = 'background-color: #8825f2';
+          
       } else {
-          numberOfGuesses++;
-          if (userGuess === targetNumber) {
-              message.textContent = `Bravo ! Vous avez deviné le nombre en ${numberOfGuesses} essais.`;
-              isGameWon = true;
-          } else if (userGuess < targetNumber) {
-              message.textContent = 'Le nombre est trop bas. Essayez à nouveau.';
-          } else {
-              message.textContent = 'Le nombre est trop élevé. Essayez à nouveau.';
-          }
-
-          if (isGameWon) {
-              // Désactivez le bouton de devinette si le jeu est gagné
-              const guessButton = document.querySelector('button');
-              guessButton.disabled = true;
-          }
+          document.getElementById("message").innerHTML = "Le nombre est plus petit. Essayez à nouveau.";
+          document.getElementById("message").style = 'background-color: #8825f2';
       }
+
+      // Incrémentation du nombre de tentatives
+      attempts++;
   }

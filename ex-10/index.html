@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jeu de Devinette</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <h1>Jeu de Devinette</h1>
-    <p>Devinez un nombre entre 1 et 100 :</p>
-    <input type="number" id="guessInput">
-    <button onclick="checkGuess()">Devinez</button>
+    <p>Devinez le nombre entre 1 et 100.</p>
+    <input type="number" id="guessInput" />
+    <button onclick="checkGuess()">Devinez!</button>
     <p id="message"></p>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
